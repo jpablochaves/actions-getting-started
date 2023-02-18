@@ -18,6 +18,3 @@ jobs:
       uses: jpablochaves/hello-world-docker-action@v1 
       with:
         who-to-greet: 'Pablo'
-    - name: Get the output time 
-      run: |
-      echo "Hola!"
