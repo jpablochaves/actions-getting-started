@@ -15,6 +15,6 @@ jobs:
     steps:
     - name: Hello world action step 
       id: hello 
-      uses: jpablochaves/hello-world-docker-action@v1 
+      uses: jpablochaves/hello-world-docker-action@v2
       with:
         who-to-greet: 'Pablo'
