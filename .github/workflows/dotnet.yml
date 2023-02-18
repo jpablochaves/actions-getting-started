@@ -1,6 +1,5 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
 name: .NET
 
 on:
@@ -8,15 +7,17 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-
-hello_world_job:
-  runs-on: ubuntu-latest
-  name: Job to say hello
-  steps:
-  - name: Hello world action step 
-    id: hello 
-    uses: jpablochaves/hello-world-docker-action@v1 
-    with:
-      who-to-greet: 'Pablo'
-  - name: Get the output time 
-    run: echo "The time we greeted was: ${{ steps.hello.outputs.time }}" 
+    
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Job to say hello
+    steps:
+    - name: Hello world action step 
+      id: hello 
+      uses: jpablochaves/hello-world-docker-action@v1 
+      with:
+        who-to-greet: 'Pablo'
+    - name: Get the output time 
+      run: |
+      echo "The time we greeted was: ${{ steps.hello.outputs.time }}"
