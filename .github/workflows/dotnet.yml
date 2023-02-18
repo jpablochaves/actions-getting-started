@@ -18,3 +18,5 @@ jobs:
       uses: jpablochaves/hello-world-docker-action@v1
       with:
         who-to-greet: 'Pablo'
+    - name: Get output time
+      run: echo "Greeting time was ${{ steps.hello.outputs.time }}"
